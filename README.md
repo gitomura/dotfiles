@@ -1,4 +1,4 @@
-# dotfiles
-dotfiles
+# settingfiles
+settingfiles
 
-dotfileの管理
+設定ファイルの管理

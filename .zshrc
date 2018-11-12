@@ -81,7 +81,7 @@ setopt auto_param_slash
 zstyle ':completion:*:default' menu select=1
 ## 補完候補の色づけ
 #eval `dircolors`
-export LSCOLORS=cxFxCxdxBxegedabagacad
+export LSCOLORS=caFxCxdxBxegedabagacad
 export LS_COLORS='di=01;32:ln=01;35:so=01;32:ex=01;31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
 export ZLS_COLORS=$LS_COLORS
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
@@ -233,6 +233,8 @@ alias cddev='cd ~/Documents/EMIT/Developments/'
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
+export PATH="$HOME/.rbenv/shims:$PATH" 
+
 alias ctags="`brew --prefix`/bin/ctags"
 
 export PYENV_ROOT="$HOME/.pyenv"
@@ -241,3 +243,4 @@ eval "$(pyenv init -)"
 
 eval "$(rbenv init -)"
 
+export PATH=$PATH:/Users/emit/.nodebrew/current/bin

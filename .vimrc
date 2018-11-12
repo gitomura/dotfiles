@@ -104,6 +104,22 @@ map <silent> <leader>E :TlistToggle<cr>
 set mouse=a
 set ttymouse=xterm2
 
+" jjで挿入モードから抜ける設定
+inoremap <silent> jj <ESC>
+
+" 入力モードでのカーソル移動
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap <C-h> <Left>
+inoremap <C-l> <Right>
+
+" 日本語入力がオンのままでも使えるコマンド(Enterキーは必要)
+nnoremap あ a
+nnoremap い i
+nnoremap う u
+nnoremap お o
+nnoremap っd dd
+nnoremap っy yy
 " neobundle settings {{{
 if has('vim_starting')
   set nocompatible
@@ -125,6 +141,9 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'nanotech/jellybeans.vim'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/neocomplete.vim'
+
+NeoBundle 'joonty/vdebug'
 
 " vimrc に記述されたプラグインでインストールされていないものがないかチェックする
 NeoBundleCheck
@@ -134,4 +153,3 @@ filetype plugin indent on
 " set t_Co=256
 " syntax on
 " colorscheme jellybeans
-
